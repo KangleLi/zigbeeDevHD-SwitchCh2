@@ -1,0 +1,11 @@
+<configurator>
+  <domain name="Ember" />
+  <!-- Use the cluster extension Extend the on/off cluster -->
+  <clusterExtension code="0x0000"> 
+    <attribute side="server" code="0x8002" 
+      define="TUYA_RESET" 
+      type="BOOLEAN" min="0x00" max="0x01" writable="true" 
+      default="0x00" optional="true" 
+      manufacturerCode="0x0000">Tuya Reset</attribute>
+  </clusterExtension>
+</configurator>

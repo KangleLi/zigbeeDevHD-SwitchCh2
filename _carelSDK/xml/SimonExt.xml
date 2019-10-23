@@ -1,0 +1,68 @@
+
+
+<configurator>
+  <domain name="Ember" />
+  <!-- Use the cluster extension Extend the basic cluster -->
+  <clusterExtension code="0x0000"> 
+	<attribute side="server" code="0xFFE0" 
+      define="TUYA_AUTH_1" 
+      type="ARRAY" length="41" writable="true" 
+      default="" 
+      optional="true" 
+      manufacturerCode="0x0000">Tuya Authorization attr1</attribute>
+
+  	<attribute side="server" code="0xFFE1" 
+      define="TUYA_AUTH_2" 
+      type="ARRAY" length="41" writable="true" 
+      default="" 
+      optional="true" 
+      manufacturerCode="0x0000">Tuya Authorization attr2</attribute>
+
+	<attribute side="server" code="0xFC01" 
+      define="TUYA_AUTH_2_BUF" 
+      type="CHAR_STRING" length="41" writable="true" 
+      default="" 
+      optional="true" 
+      manufacturerCode="0x0000">Tuya Authorization attr2 buffer</attribute>
+
+    <attribute side="server" code="0xFC02" 
+      define="SEC_EXT_PID" 
+      type="CHAR_STRING" length="16" writable="true" 
+      default="" 
+      optional="true" 
+      manufacturerCode="0x0000">Simon Ext Pid</attribute>
+
+    <attribute side="server" code="0xFC00" 
+      define="SIMON_EXT_OEM_SELECT" 
+      type="INT8U" min="0x00" max="0xFF" writable="true" 
+      default="0x00" optional="true" 
+      manufacturerCode="0x0000">OEM Select</attribute>
+
+    <!--
+    <command source="client" code="0xf0" 
+      name="tuya_ext_reset" optional="true" manufacturerCode="0x0000">
+      <description>Client command that reset the device but not leave network.</description>
+    </command>
+    -->
+  </clusterExtension>
+  <clusterExtension code="0x0006"> 
+	<attribute side="server" code="0x8001" 
+      define="INDICATOR_MODE" 
+      type="INT16U" min="0x0000"  max="0xFFFF" writable="true" 
+      default="0x0000" 
+      optional="true" 
+      manufacturerCode="0x0000">Indicator Mode</attribute>
+  </clusterExtension>
+  <clusterExtension code="0x0008"> 
+	<attribute side="server" code="0xFC00" 
+      define="LEVEL_LIMIT" 
+      type="INT16U" min="0x0000" max="0xFFFF" writable="true" 
+      default="0x01FE"  optional="true"  
+      manufacturerCode="0x0000">level limit</attribute>
+    <attribute side="server" code="0xFC01" 
+      define="LEDS_POSITION" 
+      type="INT8U" min="0x00" max="0xFF" writable="true" 
+      default="0x01"  optional="true"  
+      manufacturerCode="0x0000">Leds Position</attribute>
+  </clusterExtension>
+</configurator>

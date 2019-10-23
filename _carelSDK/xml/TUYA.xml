@@ -1,0 +1,19 @@
+
+
+<configurator>
+  <domain name="Ember" />
+  <!-- Use the cluster extension Extend the basic cluster -->
+  <clusterExtension code="0x0000"> 
+  	<!--
+    <attribute side="server" code="0x0000" 
+      define="SAMPLE_MFG_SPECIFIC_TRANSITION_TIME" 
+      type="INT16U" min="0x0000" max="0xFFFF" writable="true" 
+      default="0x0000" optional="true" 
+      manufacturerCode="0x1002">Sample Mfg Specific - Transition Time</attribute>
+      -->
+    <command source="client" code="0xf0" 
+      name="tuya_ext_reset" optional="true" manufacturerCode="0x0000">
+      <description>Client command that reset the device but not leave network.</description>
+    </command>
+  </clusterExtension>
+</configurator>

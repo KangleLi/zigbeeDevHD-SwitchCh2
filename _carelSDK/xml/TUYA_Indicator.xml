@@ -1,0 +1,11 @@
+<configurator>
+  <domain name="Ember" />
+  <!-- Use the cluster extension Extend the on/off cluster -->
+  <clusterExtension code="0x0006"> 
+    <attribute side="server" code="0x8001" 
+      define="INDICATOR_MODE" 
+      type="ENUM8" min="0x00" max="0xFF" writable="true" 
+      default="0x01" optional="true" 
+      manufacturerCode="0x0000">Indicator Mode</attribute>
+  </clusterExtension>
+</configurator>
